@@ -1,25 +1,20 @@
 ## x0c
 
-I build small, local-first tools for AI coding workflows and a few native macOS utilities — mostly things I needed myself first.
+I build local-first tools for heavy AI coding workflows and native macOS utilities — mostly things I needed myself first as a daily token burner.
 
-**Flagship — start here**
+#### 🚀 Flagship — AI Coding Workflow Suite
+- **[corral](https://github.com/corral-dev/corral)** — run Claude Code, Codex, OpenCode, Cursor, and Pi side by side in a terminal session manager, hand off context for reviews, and continue from native **[iPhone & Mac clients](https://github.com/corral-dev/corral-apple)** · *Python / Swift / Go*
+- **[subswap](https://github.com/x0c/subswap)** — check live quota and switch Claude Code, Codex, Kimi Code, Cursor, OpenCode, and Command Code accounts without signing in again · *Rust*
+- **[agentsync](https://github.com/x0c/agentsync)** — one local source of truth for `AGENTS.md`, `CLAUDE.md`, skills, and MCP configs across 20+ tools · *Go*
 
-- **[subswap](https://github.com/x0c/subswap)** — switch work and personal Claude Code, ChatGPT, Codex, and Cursor accounts without logging out · Rust
-- **[corral](https://github.com/x0c/corral)** — search Claude Code session history and resume yesterday's chat in one list · Python
+#### 🛠️ Agent Skills & Libraries
+- **[agent-doc-skills](https://github.com/x0c/agent-doc-skills)** — navigable project knowledge base skills (`doc-init`, `doc-update`, `doc-compact`) so coding agents don't rediscover your repo every session
+- **[image-skills](https://github.com/x0c/image-skills)** & **[agent-friendly-cli-skill](https://github.com/x0c/agent-friendly-cli-skill)** — specialized Agent Skills for asset processing and non-interactive CLI design
+- **[sesskit](https://github.com/x0c/sesskit)** — Python library and JSON CLI to parse and export local Claude Code, Codex CLI, and Cursor session transcripts · *Python*
 
-**Also useful**
-
-- **[doc-skills](https://github.com/x0c/doc-skills)** — navigable project documentation a coding agent can pick up cold
-- **[agentsync](https://github.com/x0c/agentsync)** — one source of truth for agent rules, skills, and MCP configs across tools · Go
-- **[sesskit](https://github.com/x0c/sesskit)** — parse and export local Claude / Codex / Cursor session files · Python
-
-**macOS** (menu bar / desktop; see [NeatMacApps](https://github.com/NeatMacApps) for the editor & clipboard apps)
-
+#### 🍎 Native macOS Utilities (Menu Bar & Desktop)
 - **[MacResourceMonitor](https://github.com/x0c/MacResourceMonitor)** — menu-bar CPU monitor: see what is eating CPU, then end it
-- **[HandySwitch](https://github.com/x0c/HandySwitch)** — tiny menu-bar toggles (dark mode, prevent sleep, scroll)
-- **[Mirror](https://github.com/x0c/Mirror)** · **[OpenInput](https://github.com/x0c/OpenInput)**
-- **[NeatEditor](https://github.com/NeatMacApps/NeatEditor)** · **[NeatPaste](https://github.com/NeatMacApps/NeatPaste)**
+- **[HandySwitch](https://github.com/x0c/HandySwitch)** — tiny menu-bar toggles (dark mode, prevent sleep, scroll direction)
+- **[Mirror](https://github.com/x0c/Mirror)** · **[OpenInput](https://github.com/x0c/OpenInput)** · **[NeatEditor & NeatPaste](https://github.com/NeatMacApps)**
 
-If something here helps, star the flagship repos so you can find them again later.
-
-Go · Rust · Swift · Python · TypeScript
+*If something here saves you time or tokens, star the repos so you can find them again later.*
