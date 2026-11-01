@@ -11,6 +11,7 @@ I build local-first tools for heavy AI coding workflows and native macOS utiliti
 - **[agent-doc-skills](https://github.com/x0c/agent-doc-skills)** — navigable project knowledge base skills (`doc-init`, `doc-update`, `doc-compact`) so coding agents don't rediscover your repo every session
 - **[image-skills](https://github.com/x0c/image-skills)** & **[agent-friendly-cli-skill](https://github.com/x0c/agent-friendly-cli-skill)** — specialized Agent Skills for asset processing and non-interactive CLI design
 - **[sesskit](https://github.com/x0c/sesskit)** — Python library and JSON CLI to parse and export local Claude Code, Codex CLI, and Cursor session transcripts · *Python*
+- **[agent-session-control](https://github.com/x0c/agent-session-control)** — Python library + JSON CLI + ACP adapter to launch and track local coding-agent sessions, delegating history observation to SessKit · *Python*
 
 #### 🍎 Native macOS Utilities (Menu Bar & Desktop)
 - **[MacResourceMonitor](https://github.com/x0c/MacResourceMonitor)** — menu-bar CPU monitor: see what is eating CPU, then end it
