@@ -16,6 +16,7 @@ I build local-first tools for heavy AI coding workflows and native macOS utiliti
 #### 🍎 Native macOS Utilities (Menu Bar & Desktop)
 - **[MacResourceMonitor](https://github.com/x0c/MacResourceMonitor)** — menu-bar CPU monitor: see what is eating CPU, then end it
 - **[HandySwitch](https://github.com/x0c/HandySwitch)** — tiny menu-bar toggles (dark mode, prevent sleep, scroll direction)
+- **[NeatWebApp](https://github.com/NeatMacApps/NeatWebApp)** — turn websites into focused macOS apps with a notch launcher, edge-tucking activity Dock, and per-site element hiding
 - **[Mirror](https://github.com/x0c/Mirror)** · **[OpenInput](https://github.com/x0c/OpenInput)** · **[NeatEditor & NeatPaste](https://github.com/NeatMacApps)**
 
 *If something here saves you time or tokens, star the repos so you can find them again later.*
