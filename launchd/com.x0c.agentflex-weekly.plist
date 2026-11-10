@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Weekly agentflex profile update: every Monday 09:00 local time.
+         Install with:
+           cp launchd/com.x0c.agentflex-weekly.plist ~/Library/LaunchAgents/
+           launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.x0c.agentflex-weekly.plist
+         The Mac must be awake and logged in at that time; otherwise run
+         scripts/update-agentflex.sh manually. Logs: /tmp/agentflex-weekly.log -->
+    <key>Label</key>
+    <string>com.x0c.agentflex-weekly</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/geraltgraham/Codes/GitHubProfile/scripts/update-agentflex.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/agentflex-weekly.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/agentflex-weekly.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <!-- gh push over HTTPS needs no extra env when the credential helper is set up -->
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>
