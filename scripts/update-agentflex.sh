@@ -5,20 +5,40 @@
 #
 #   ./scripts/update-agentflex.sh            # render + update README + push
 #   ./scripts/update-agentflex.sh --no-push  # render + update README only
+#   ./scripts/update-agentflex.sh --if-stale 6  # only run if the PNG is older than 6 days
+#                                              # (used by the catch-up timer)
 #
-# Scheduled via launchd (see launchd/com.x0c.agentflex-weekly.plist).
+# Scheduled via launchd (see launchd/*.plist). Note: launchd's
+# StartCalendarInterval does NOT compensate a missed run — if the Mac is
+# asleep at Monday 09:00, that occurrence is silently skipped. The
+# com.x0c.agentflex-catchup timer (RunAtLoad + every 6h) covers this by
+# calling this script with --if-stale 6.
 set -euo pipefail
 
 NO_PUSH=0
-if [[ "${1:-}" == "--no-push" ]]; then
-  NO_PUSH=1
-fi
+IF_STALE=""
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --no-push) NO_PUSH=1; shift ;;
+    --if-stale) IF_STALE="${2:-}"; shift 2 ;;
+    *) echo "unknown arg: $1" >&2; exit 1 ;;
+  esac
+done
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 ASSETS="$ROOT/assets"
 PNG="$ASSETS/agentflex-week.png"
 README="$ROOT/README.md"
 LOG_PREFIX="agentflex-weekly"
+
+if [[ -n "$IF_STALE" && -f "$PNG" ]]; then
+  AGE_DAYS=$(( ($(date +%s) - $(stat -f %m "$PNG")) / 86400 ))
+  if [[ "$AGE_DAYS" -lt "$IF_STALE" ]]; then
+    echo "[$LOG_PREFIX] card is fresh (${AGE_DAYS}d < ${IF_STALE}d), skipping."
+    exit 0
+  fi
+  echo "[$LOG_PREFIX] card is stale (${AGE_DAYS}d >= ${IF_STALE}d), refreshing."
+fi
 
 mkdir -p "$ASSETS"
 

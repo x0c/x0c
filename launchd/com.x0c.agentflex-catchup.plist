@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Catch-up companion for com.x0c.agentflex-weekly: launchd does NOT
+         rerun a missed StartCalendarInterval job after wake, and wake-from-
+         sleep fires no login event, so this polls instead — at login plus
+         every 6 hours — and the script no-ops unless the card PNG is older
+         than 6 days. The Monday 09:00 job always runs unconditionally.
+         Install with:
+           cp launchd/com.x0c.agentflex-catchup.plist ~/Library/LaunchAgents/
+           launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.x0c.agentflex-catchup.plist
+         Logs: /tmp/agentflex-weekly.log -->
+    <key>Label</key>
+    <string>com.x0c.agentflex-catchup</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/geraltgraham/Codes/GitHubProfile/scripts/update-agentflex.sh</string>
+        <string>--if-stale</string>
+        <string>6</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StandardOutPath</key>
+    <string>/tmp/agentflex-weekly.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/agentflex-weekly.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>
