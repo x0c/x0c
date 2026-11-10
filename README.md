@@ -19,4 +19,9 @@ I build local-first tools for heavy AI coding workflows and native macOS utiliti
 - **[NeatWebApp](https://github.com/NeatMacApps/NeatWebApp)** — turn websites into focused macOS apps with a notch launcher, edge-tucking activity Dock, and per-site element hiding
 - **[Mirror](https://github.com/x0c/Mirror)** · **[OpenInput](https://github.com/x0c/OpenInput)** · **[NeatEditor & NeatPaste](https://github.com/NeatMacApps)**
 
+#### 📊 Coding Week
+<!-- agentflex-start -->
+![coding-agent week](./assets/agentflex-week.png)
+*Week of 2026-11-10 · 239 sessions · 2.45B tokens · peak 11 parallel (11-08 13:10) — auto-updated weekly by [agentflex](https://github.com/corral-dev/agentflex).*
+<!-- agentflex-end -->
 *If something here saves you time or tokens, star the repos so you can find them again later.*
