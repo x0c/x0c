@@ -22,6 +22,6 @@ I build local-first tools for heavy AI coding workflows and native macOS utiliti
 #### 📊 Coding Week
 <!-- agentflex-start -->
 ![coding-agent week](./assets/agentflex-week.png)
-*Week of 2026-11-22 · 223 sessions · 4.26B tokens · peak 11 parallel (11-16 22:26) — auto-updated weekly by [agentflex](https://github.com/corral-dev/agentflex).*
+*Week of 2026-11-23 · 204 sessions · 3.78B tokens · peak 9 parallel (11-19 10:14) — auto-updated weekly by [agentflex](https://github.com/corral-dev/agentflex).*
 <!-- agentflex-end -->
 *If something here saves you time or tokens, star the repos so you can find them again later.*
